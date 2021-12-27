@@ -137,7 +137,7 @@
 	<joint name="right_knee" type="revolute" >
 		<parent link="right_hip" />
 		<child link="right_knee" />
-		 <limit effort="1000.0" lower="-3.14" upper="0." velocity="0.5"/>
+		 <limit effort="0" lower="-3.14" upper="0." velocity="200"/>
 			<origin rpy = "0 0 0" xyz = "0.000000 -1.686184 0.000000" />
 		<axis xyz = "0.000000 0.000000 1.000000" />
 	</joint>
@@ -161,12 +161,12 @@
 			</geometry>
 		</visual>
 	</link>
-	<joint name="right_ankle" type="revolute" >
+	<joint name="right_ankle" type="fixed" >
 		<parent link="right_knee" />
 		<child link="right_ankle" />
-		<limit effort="1000.0" lower="-0.785" upper="0." velocity="0.5"/>
+		<!-- <limit effort="1000.0" lower="-0.785" upper="0." velocity="0.5"/> -->
 				<origin rpy = "0 0 0" xyz = "0.000000 -1.639480 0.000000" />
-		<axis xyz = "0.000000 0.000000 1.000000" />
+		<!-- <axis xyz = "0.000000 0.000000 1.000000" /> -->
 				
 	</joint>
 	<link name="right_shoulder" >
